@@ -1,7 +1,7 @@
 cluster:
   domain: {{ .Requirements.ingress.domain }}
   namespace: {{ .Requirements.cluster.namespace | default "jx" }}
-  namespaceSubDomain: {{ .Requirements.ingress.namespaceSubDomain | default ".jx." }}
+  namespaceSubDomain: {{ .Requirements.ingress.namespaceSubDomain | default "-jx." }}
 {{- if hasKey .Requirements.cluster "project" }}
   projectID: {{ .Requirements.cluster.project }}
 {{- else }}
